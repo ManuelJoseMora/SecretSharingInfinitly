@@ -182,6 +182,7 @@ def desencriptado():
     #    print(participant)
     #    print(globals()[participant])
 
+
     # ---------------------------------------------------------------------------------------------------------------------
     # Caso 2 - Entre diferentes Generaciones.
     # ---------------------------------------------------------------------------------------------------------------------
@@ -189,46 +190,51 @@ def desencriptado():
     # generación g y compartir s_i con SSS(i,size(g))
     # ---------------------------------------------------------------------------------------------------------------------
 
+
     # Generamos (k-1)*numero_generaciones shares
     numero_generaciones = n_generacion - 1
-    numero_shares = numero_generaciones * (int(k) - 1)
-    sss_inter_g = shamirs.shares(int(key), quantity=int(numero_shares), threshold=int(k))
 
-    # Seleccionamos k-1 shares que se han de repartir en g1,
-    # los k-1 siguientes shares se reparten en g2 y asi sucesivamente.
+    print("Numero de generaciones: " + str(numero_generaciones))
 
-    start_p = 0
-    inicio_g = 0
-    end_p = int(k) - 1
-    index_sss = 1
-    for i in range(numero_generaciones):
+    if(numero_generaciones > 1):
+        numero_shares = numero_generaciones * (int(k) - 1)
+        sss_inter_g = shamirs.shares(int(key), quantity=int(numero_shares), threshold=int(k))
 
-        participants_in_g = participants[inicio_g:(inicio_g + generation_size(i + 1, int(k)))]
+        # Seleccionamos k-1 shares que se han de repartir en g1,
+        # los k-1 siguientes shares se reparten en g2 y asi sucesivamente.
 
-        shares_for_g = sss_inter_g[start_p:end_p]
+        start_p = 0
+        inicio_g = 0
+        end_p = int(k) - 1
+        index_sss = 1
+        for i in range(numero_generaciones):
 
-        # Hay que repartir cada share s_i entre los miembros de la generación g
-        # usando SSS(i, size(g))
-        idx_threshold = 1
-        for share in shares_for_g:
+            participants_in_g = participants[inicio_g:(inicio_g + generation_size(i + 1, int(k)))]
 
-            sss_share_i = shamirs.shares(share.value, quantity=generation_size(i + 1, int(k)), threshold=idx_threshold)
+            shares_for_g = sss_inter_g[start_p:end_p]
 
-            # Falta guardar en cada participante su share en el nivel que le corresponda
-            t = 0
-            for participant in participants_in_g:
+            # Hay que repartir cada share s_i entre los miembros de la generación g
+            # usando SSS(i, size(g))
+            idx_threshold = 1
+            for share in shares_for_g:
 
-                sss_share_i[t].index = index_sss
+                sss_share_i = shamirs.shares(share.value, quantity=generation_size(i + 1, int(k)), threshold=idx_threshold)
 
-                globals()[participant].append(sss_share_i[t])
-                t = t + 1
+                # Falta guardar en cada participante su share en el nivel que le corresponda
+                t = 0
+                for participant in participants_in_g:
 
-            idx_threshold = idx_threshold + 1
-            index_sss = index_sss + 1
+                    sss_share_i[t].index = index_sss
 
-        start_p = end_p
-        end_p = start_p + (int(k) - 1)
-        inicio_g = inicio_g + generation_size(i + 1, int(k))
+                    globals()[participant].append(sss_share_i[t])
+                    t = t + 1
+
+                idx_threshold = idx_threshold + 1
+                index_sss = index_sss + 1
+
+            start_p = end_p
+            end_p = start_p + (int(k) - 1)
+            inicio_g = inicio_g + generation_size(i + 1, int(k))
 
 
 
