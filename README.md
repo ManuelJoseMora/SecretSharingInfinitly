@@ -39,20 +39,19 @@ Deberás introducir un entero positivo que será la clave sobre la que se genera
 
 Indica la opción 1 y ve añadiendo nombres de usuarios:
 
-
-![alt text]()
+![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_add_usuario.JPG)
 
 Añade nombres de usuarios. Puedes Listarlos usando la opción 4:
 
-![alt text]()
+![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_listar_usuarios.JPG)
 
 Añade una lista separadas por comas con los nombres de los usuarios que cumplan con el k "threashold" necesario para pdoer obtener la clave usando la opción 2:
 
-![alt text]()
+![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_a%C3%B1ade_usuarios_desencriptar.JPG)
 
 Usa la opción 6 para desencriptar la clave:
 
-![alt text]()
+![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_desencriptar.JPG)
 
 
 
