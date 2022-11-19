@@ -1,5 +1,9 @@
-# Secret SharingI nfinitly
+#                                     ----------------------------------------------
+#                                     ------     Secret SharingI Infinitly   -------
+#                                     ----------------------------------------------
+
 ## Master en Ciberseguridad y Privacidad 2021/2022
 ### Universisad Rey Juan Carlos
 
 ##### Autor: Manuel Jose Mora Cordero
+
