@@ -30,6 +30,14 @@ El software esta diseñado como un simple script de Python, ejecutable desde con
 
 > python sss_infinitly.py
 
+![alt text]()
+
+
+Deberás introducir un entero positivo que será la clave sobre la que se generarán los "shares" y el "threshold" k ó numero entero positivo que indique el número de participantes necesario para pdoer obtener la clave.
+
+![alt text]()
+
+
 
 
 
