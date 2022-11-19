@@ -37,6 +37,23 @@ Deberás introducir un entero positivo que será la clave sobre la que se genera
 
 ![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_key_threshold_menu_principal.JPG)
 
+Indica la opción 1 y ve añadiendo nombres de usuarios:
+
+
+![alt text]()
+
+Añade nombres de usuarios. Puedes Listarlos usando la opción 4:
+
+![alt text]()
+
+Añade una lista separadas por comas con los nombres de los usuarios que cumplan con el k "threashold" necesario para pdoer obtener la clave usando la opción 2:
+
+![alt text]()
+
+Usa la opción 6 para desencriptar la clave:
+
+![alt text]()
+
 
 
 
