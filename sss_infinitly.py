@@ -29,7 +29,18 @@ def participant_generation(participant_name):
 
     return init
 
+def get_generation(participants):
+    i = 1
+    generation_limit = i * (2 ** (int(k) - 1))
+    for people in participants:
 
+        if (participants.index(people)) < generation_limit:
+            print(people + " está en la generación  " + str(i))
+        else:
+
+            i = i + 1
+            generation_limit =  generation_limit + (i * (2 ** (int(k) - 1)))
+            print(people + " está en la generación " + str(i))
 
 
 
@@ -165,8 +176,9 @@ def desencriptado():
             idx_g = 1
             while (idx_g <= size_g):
                 idx_participant = n - 1
-                participant_i = participants[idx_participant]
-                globals()[participant_i] = [sss[n_shares]]
+                if idx_participant < len(participants):
+                    participant_i = participants[idx_participant]
+                    globals()[participant_i] = [sss[n_shares]]
 
                 n_shares = n_shares + 1
                 n = n + 1
@@ -322,8 +334,9 @@ while (seguimos):
         desencriptado()
         seguimos = True
     elif participant == '7':
-        for user in participants:
-            print("User: " + str(user) + " is in generation " + str(participant_generation(user)))
+        get_generation(participants)
+        #for user in participants:
+        #    print("User: " + str(user) + " is in generation " + str(participant_generation(user)))
 
     else:
         time.sleep(2)
