@@ -52,7 +52,7 @@ Añade una lista separada por comas con los nombres de los usuarios que cumplan 
 
 Usa la opción 6 para reconstruir la clave:
 
-![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_desencriptar.JPG
+![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_desencriptar.JPG)
 
 
 
