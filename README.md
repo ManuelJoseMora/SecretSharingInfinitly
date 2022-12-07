@@ -50,7 +50,7 @@ Añade una lista separada por comas con los nombres de los usuarios que cumplan 
 
 ![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_a%C3%B1ade_usuarios_desencriptar.JPG)
 
-Usa la opción 6 para desencriptar la clave:
+Usa la opción 6 para reconstruir la clave:
 
 ![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_desencriptar.JPG)
 
