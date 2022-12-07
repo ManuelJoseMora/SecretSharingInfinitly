@@ -1,5 +1,5 @@
 #                                     ----------------------------------------------
-#                                     ------     Secret SharingI Infinitly   -------
+#                                     ------     Secret SharingI Infinitely  -------
 #                                     ----------------------------------------------
 
 ## Master en Ciberseguridad y Privacidad 2021/2022
@@ -9,18 +9,19 @@
 ##### Autor: Manuel Jose Mora Cordero
 
 
-El siguiente software es un prueba de concepto de como se puede implementar un método de compartición de secretos de manera infnita. es decir, sin necesisas de fijar un nnúmero n de participantes.
+El siguiente software es un prueba de concepto de como se puede implementar un método de compartición de secretos de manera infnita. es decir, sin necesisas de fijar un número n de participantes.
 
-La idea base esta sacada del documento ...
+La idea base esta sacada del documento "How to Share a Secret, Infinitely", Komargodski, Naor & Yogev, 2016. 
+(KNY16] Ilan Komargodski, Moni Naor, and Eylon Yogev. How to share a secret, infinitely. In Theory of Cryptography - 14th International Conference, TCC 2016-B, pages 485–514 2016.) [Link](https://eprint.iacr.org/2016/194.pdf).
 
-El proposito de este software es generar una prueba de comcepto que acompañe al texto explicativo o memoria del trabajo fin de máster. 
-No es proposito de este software desarrollar una herramienta completa, totalmente funcional, sino la de hacer ver como se pueden construir este tipo de esquemas de compartición de secretos, basandones en las ideas recogidas en el documento antes mencionado.
+El proposito de este software es generar una prueba de concepto que acompañe al texto explicativo o memoria del trabajo fin de máster. 
+No es proposito de este software desarrollar una herramienta completa, totalmente funcional, sino la de hacer ver como se puede construir este tipo de esquemas de compartición de secretos, basandones en las ideas recogidas en el documento antes mencionado.
 
 El software ha sido desarrollado usando 
 
 > Python 3.8.8 
 
-Librerias ,y versiones instaladas neesarias:
+Librerías y versiones instaladas necesarias:
 
 > shamirs==2.0.2
 
@@ -45,7 +46,7 @@ Añade nombres de usuarios. Puedes Listarlos usando la opción 4:
 
 ![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_listar_usuarios.JPG)
 
-Añade una lista separadas por comas con los nombres de los usuarios que cumplan con el k "threashold" necesario para pdoer obtener la clave usando la opción 2:
+Añade una lista separada por comas con los nombres de los usuarios que cumplan con el k "threshold" necesario para poder obtener la clave usando la opción 2:
 
 ![alt text](https://github.com/ManuelJoseMora/SecretSharingInfinitly/blob/develop/screenshots/captura_a%C3%B1ade_usuarios_desencriptar.JPG)
 
